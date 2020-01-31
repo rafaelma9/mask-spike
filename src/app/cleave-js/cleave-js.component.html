@@ -1,0 +1,31 @@
+{{ maskForm.value | json}}
+<form [formGroup]="maskForm">
+    <!-- inconsistência no form do Angular ao não adicionar o maxlength -->
+    <div style="display: flex; flex-flow: column; width: 30%; margin: auto;">
+        <mat-form-field>
+            <mat-label>CPF</mat-label>
+            <input maxlength='14' autocomplete="off" matInput type="text" id="cpf" formControlName="cpf">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>CNPJ</mat-label>
+            <input autocomplete="off" matInput type="text" id="cnpj" formControlName="cnpj">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>CNAE</mat-label>
+            <input autocomplete="off" matInput type="text" id="cnae" formControlName="cnae">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Telefone Móvel</mat-label>
+            <input autocomplete="off" matInput type="text" id="telMovel" formControlName="telMovel">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Telefone Fixo</mat-label>
+            <input autocomplete="off" matInput type="text" id="telFixo" formControlName="telFixo">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Telefone Comercial</mat-label>
+            <input autocomplete="off" matInput type="text" id="telComercial"
+                formControlName="telComercial">
+        </mat-form-field>
+    </div>
+</form>
