@@ -11,7 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { HosterComponent } from './hoster/hoster.component';
 import { CleaveJsComponent } from './cleave-js/cleave-js.component';
-import { MaskingDirective } from './directives/masking.directive';
+import { CpfDirective } from './directives/cpf.directive';
+import { CnpjDirective } from './directives/cnpj.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MaskingDirective } from './directives/masking.directive';
     InputMaskComponent,
     HosterComponent,
     CleaveJsComponent,
-    MaskingDirective
+    CpfDirective,
+    CnpjDirective
   ],
   imports: [
     BrowserModule,
