@@ -3,11 +3,11 @@
     <div style="display: flex; flex-flow: column; width: 30%; margin: auto;">
         <mat-form-field>
             <mat-label>CPF</mat-label>
-            <input [ma9Masking]="cpfStringPatter" ma9MaskingControl="cpf" autocomplete="off" matInput type="text" id="cpf" formControlName="cpf">
+            <input [ma9Masking]="cpfStringPattern" ma9MaskingControl="cpf" autocomplete="off" matInput type="text" id="cpf" formControlName="cpf">
         </mat-form-field>
         <mat-form-field>
             <mat-label>CNPJ</mat-label>
-            <input autocomplete="off" matInput type="text" id="cnpj" formControlName="cnpj">
+            <input [ma9Masking]="cnpjStringPattern" ma9MaskingControl="cnpj" autocomplete="off" matInput type="text" id="cnpj" formControlName="cnpj">
         </mat-form-field>
         <mat-form-field>
             <mat-label>CNAE</mat-label>

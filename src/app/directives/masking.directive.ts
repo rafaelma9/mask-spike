@@ -14,7 +14,7 @@ export class MaskingDirective implements OnInit, OnDestroy {
     this.name = name;
   }
 
-  @Input('ma9Masking') maskPattern;
+  @Input('ma9Masking') maskPattern: string;
 
   name: string;
   control: FormControl;
@@ -26,8 +26,9 @@ export class MaskingDirective implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+    console.log()
     const mask = new Inputmask({
-      regex: '\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}',
+      regex: this.maskPattern,
       jitMasking: true
     } as any).mask(this.elementRef.nativeElement as HTMLInputElement);
 
@@ -38,7 +39,7 @@ export class MaskingDirective implements OnInit, OnDestroy {
 
   updateModelUnmasked(value: string): void {
     // const pattern = /(\d{3}).(\d{3}).(\d{3})-(\d{2})/; // seria importado do common para ser utilizado aqui
-    const pattern = new RegExp('\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}');
+    const pattern = new RegExp(this.maskPattern);
 
     if (pattern.test(value)) {
       this.control.setValue(value.replace(/\D/g, ''), {
